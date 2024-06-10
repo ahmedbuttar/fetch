@@ -8,10 +8,7 @@
 import Foundation
 import Combine
 
-// TODO: make generic network service in future
-
 struct Response {
-    
     var data: Data?
     
     init(data: Data?) {
@@ -25,7 +22,7 @@ protocol NetworkServiceProtocol {
 
 class NetworkService: NetworkServiceProtocol {
     
-    let session: URLSession
+    private let session: URLSession
     
     init() {
         let configuration = URLSessionConfiguration.default
@@ -41,7 +38,8 @@ class NetworkService: NetworkServiceProtocol {
                     case 200...300:
                         promise(.success(Response(data: data)))
                     default:
-                        print("error")
+                        // TODO: make error types for network codes
+                        promise(.failure(error ?? NSError()))
                     }
                 }
                 

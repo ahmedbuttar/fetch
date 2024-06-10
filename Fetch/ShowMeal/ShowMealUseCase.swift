@@ -26,6 +26,7 @@ class ShowMealUseCase: ShowMealUseCaseful {
                 guard let data = response.data else { throw NSError() }
                 let decoder = JSONDecoder()
                 guard let meal = try decoder.decode(MealDetailResponse.self, from: data).meals.first else {
+                    // TODO: make error type for this use case and handle properly
                     throw NSError()
                 }
                 return meal
@@ -34,7 +35,7 @@ class ShowMealUseCase: ShowMealUseCaseful {
     }
     
     // make generic build function
-    func buildRequest(mealId: String) -> URLRequest {
+    private func buildRequest(mealId: String) -> URLRequest {
         var components: URLComponents = URLComponents(string: "/api/json/v1/1/lookup.php?i=\(mealId)")!
         components.scheme = "https"
         components.host = "themealdb.com"

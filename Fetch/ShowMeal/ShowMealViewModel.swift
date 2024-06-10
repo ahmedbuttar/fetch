@@ -25,6 +25,7 @@ class ShowMealViewModel: ObservableObject {
         showMealUseCase.getMeal(mealId: mealId)
             .receive(on: RunLoop.main)
             .catch { error -> AnyPublisher<MealDetail, Never> in
+                // TODO: properly handle error with UI updates
                 return Empty<MealDetail, Never>().eraseToAnyPublisher()
             }
             .assign(to: &$mealDetail)

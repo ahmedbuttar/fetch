@@ -25,7 +25,6 @@
 		2AEEE3C82C15FD8F002C664E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEEE3C72C15FD8F002C664E /* NetworkService.swift */; };
 		2AEEE3CC2C1646F6002C664E /* ShowMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEEE3CB2C1646F6002C664E /* ShowMealView.swift */; };
 		2AEEE3D12C1659F7002C664E /* MealDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEEE3D02C1659F7002C664E /* MealDetails.swift */; };
-		2AEEE3D82C169243002C664E /* FetchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEEE3D72C169243002C664E /* FetchTests.swift */; };
 		2AEEE3DA2C169386002C664E /* ShowMealsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEEE3D92C169386002C664E /* ShowMealsViewModelTests.swift */; };
 		2AEEE3DC2C1695CC002C664E /* ShowMealsUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEEE3DB2C1695CC002C664E /* ShowMealsUseCaseMock.swift */; };
 /* End PBXBuildFile section */
@@ -70,7 +69,6 @@
 		2AEEE3C72C15FD8F002C664E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2AEEE3CB2C1646F6002C664E /* ShowMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMealView.swift; sourceTree = "<group>"; };
 		2AEEE3D02C1659F7002C664E /* MealDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetails.swift; sourceTree = "<group>"; };
-		2AEEE3D72C169243002C664E /* FetchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTests.swift; sourceTree = "<group>"; };
 		2AEEE3D92C169386002C664E /* ShowMealsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMealsViewModelTests.swift; sourceTree = "<group>"; };
 		2AEEE3DB2C1695CC002C664E /* ShowMealsUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMealsUseCaseMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,7 +136,6 @@
 		2AEEE3962C15F098002C664E /* FetchTests */ = {
 			isa = PBXGroup;
 			children = (
-				2AEEE3D72C169243002C664E /* FetchTests.swift */,
 				2AEEE3D92C169386002C664E /* ShowMealsViewModelTests.swift */,
 				2AEEE3DB2C1695CC002C664E /* ShowMealsUseCaseMock.swift */,
 			);
@@ -373,7 +370,6 @@
 			files = (
 				2AEEE3DC2C1695CC002C664E /* ShowMealsUseCaseMock.swift in Sources */,
 				2AEEE3DA2C169386002C664E /* ShowMealsViewModelTests.swift in Sources */,
-				2AEEE3D82C169243002C664E /* FetchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

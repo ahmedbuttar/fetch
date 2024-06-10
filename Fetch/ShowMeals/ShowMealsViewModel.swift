@@ -24,6 +24,7 @@ class ShowMealsViewModel: ShowMealsViewModelProtocol {
         showMealsUseCase.getMeals()
             .receive(on: RunLoop.main)
             .catch ({ error -> AnyPublisher<Meals, Never> in
+                // TODO: properly handle error with UI updates
                 return Empty<Meals, Never>().eraseToAnyPublisher()
             })
             .map { meals in

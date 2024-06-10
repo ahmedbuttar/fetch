@@ -25,12 +25,12 @@ class ShowMealsViewController: UIViewController {
         title = "Desserts"
     }
     
-    func addSubviews() {
+    private func addSubviews() {
         listView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(listView)
     }
     
-    func addConstraints() {
+    private func addConstraints() {
         NSLayoutConstraint.activate([
             listView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             listView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
@@ -41,7 +41,7 @@ class ShowMealsViewController: UIViewController {
     
 }
 
-extension ShowMealsViewController {
+private extension ShowMealsViewController {
     func setBindings() {
         viewModel.refreshData()
             .sink { [weak self] snapshot in

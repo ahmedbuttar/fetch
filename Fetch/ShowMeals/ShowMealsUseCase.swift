@@ -14,7 +14,7 @@ public protocol ShowMealsUseCaseful {
 
 class ShowMealsUseCase: ShowMealsUseCaseful {
     
-    let networkService: NetworkServiceProtocol
+    private let networkService: NetworkServiceProtocol
     
     init(networkService: NetworkServiceProtocol) {
         self.networkService = networkService
@@ -31,7 +31,7 @@ class ShowMealsUseCase: ShowMealsUseCaseful {
     }
     
     // make generic build function
-    func buildRequest() -> URLRequest {
+    private func buildRequest() -> URLRequest {
         var components: URLComponents = URLComponents(string: "/api/json/v1/1/filter.php?c=Dessert")!
         components.scheme = "https"
         components.host = "themealdb.com"
